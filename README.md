@@ -1,4 +1,4 @@
-![caphar logo](/res/caphar.png)
+![caphar logo](res/caphar.png)
 # caphar
 Graph database showing the relationships between all characters in the Bible.
 
