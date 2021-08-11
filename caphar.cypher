@@ -71,7 +71,37 @@ CREATE (Dodanim:Person { name: 'Dodanim', firstMentioned: 'Genesis 10:4', death:
 CREATE (Cush:Person { name: 'Cush', firstMentioned: 'Genesis 10:6', death: 'Genesis ', gender: 'male' })
 CREATE (Mizraim:Person { name: 'Mizraim', firstMentioned: 'Genesis 10:6', death: 'Genesis ', gender: 'male' })
 CREATE (Put:Person { name: 'Put', firstMentioned: 'Genesis 10:6', death: 'Genesis ', gender: 'male' })
+CREATE (Seba:Person { name: 'Seba', firstMentioned: 'Genesis 10:7', death: 'Genesis ', gender: 'male' })
+CREATE (Havilah:Person { name: 'Havilah', firstMentioned: 'Genesis 10:7', death: 'Genesis ', gender: 'male' })
+CREATE (Sabtah:Person { name: 'Sabtah', firstMentioned: 'Genesis 10:7', death: 'Genesis ', gender: 'male' })
+CREATE (Raamah:Person { name: 'Raamah', firstMentioned: 'Genesis 10:7', death: 'Genesis ', gender: 'male' })
+CREATE (Sabteca:Person { name: 'Sabteca', firstMentioned: 'Genesis 10:7', death: 'Genesis ', gender: 'male' })
+CREATE (Sheba:Person { name: 'Sheba', firstMentioned: 'Genesis 10:7', death: 'Genesis ', gender: 'male' })
+CREATE (Dedan:Person { name: 'Dedan', firstMentioned: 'Genesis 10:7', death: 'Genesis ', gender: 'male' })
+CREATE (Nimrod:Person { name: 'Nimrod', firstMentioned: 'Genesis 10:8', death: 'Genesis ', gender: 'male' })
+CREATE (Ludim:Person { name: 'Ludim', firstMentioned: 'Genesis 10:13', death: 'Genesis ', gender: 'male' })
+CREATE (Anamim:Person { name: 'Anamim', firstMentioned: 'Genesis 10:13', death: 'Genesis ', gender: 'male' })
+CREATE (Lehabim:Person { name: 'Lehabim', firstMentioned: 'Genesis 10:13', death: 'Genesis ', gender: 'male' })
+CREATE (Naphtuhim:Person { name: 'Naphtuhim', firstMentioned: 'Genesis 10:13', death: 'Genesis ', gender: 'male' })
+CREATE (Pathrusim:Person { name: 'Pathrusim', firstMentioned: 'Genesis 10:14', death: 'Genesis ', gender: 'male' })
+CREATE (Casluhim:Person { name: 'Casluhim', firstMentioned: 'Genesis 10:14', death: 'Genesis ', gender: 'male' })
+CREATE (Sidon:Person { name: 'Sidon', firstMentioned: 'Genesis 10:15', death: 'Genesis ', gender: 'male' })
+CREATE (Heth:Person { name: 'Heth', firstMentioned: 'Genesis 10:15', death: 'Genesis ', gender: 'male' })
+// NOTE: These are more likely to be People Groups rather than individual persons.
+// CREATE (Jebusite:Person { name: 'Jebusite', firstMentioned: 'Genesis 10:16', death: 'Genesis ', gender: 'male' })
+// CREATE (Amorite:Person { name: 'Amorite', firstMentioned: 'Genesis 10:16', death: 'Genesis ', gender: 'male' })
+// CREATE (Girgashite:Person { name: 'Girgashite', firstMentioned: 'Genesis 10:16', death: 'Genesis ', gender: 'male' })
+// CREATE (Hivite:Person { name: 'Hivite', firstMentioned: 'Genesis 10:17', death: 'Genesis ', gender: 'male' })
+// CREATE (Arkite:Person { name: 'Arkite', firstMentioned: 'Genesis 10:17', death: 'Genesis ', gender: 'male' })
+// CREATE (Sinite:Person { name: 'Sinite', firstMentioned: 'Genesis 10:17', death: 'Genesis ', gender: 'male' })
+// CREATE (Arvadite:Person { name: 'Arvadite', firstMentioned: 'Genesis 10:18', death: 'Genesis ', gender: 'male' })
+// CREATE (Zemarite:Person { name: 'Zemarite', firstMentioned: 'Genesis 10:18', death: 'Genesis ', gender: 'male' })
+// CREATE (Hamathite:Person { name: 'Hamathite', firstMentioned: 'Genesis 10:18', death: 'Genesis ', gender: 'male' })
 
+
+//
+// RELATIONSHIPS - PEOPLE to PEOPLE
+//
 CREATE
 (Adam)-[:HUSBAND_OF {ref: 'Genesis 2:25' }]->(Eve),
 (Eve)-[:WIFE_OF {ref: 'Genesis 2:25' }]->(Adam),
@@ -205,3 +235,86 @@ CREATE
 (Canaan)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Cush),
 (Canaan)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Mizraim),
 (Canaan)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Put),
+(Cush)-[:FATHER_OF {ref: 'Genesis 10:7' }]->(Seba),
+(Cush)-[:FATHER_OF {ref: 'Genesis 10:7' }]->(Havilah),
+(Cush)-[:FATHER_OF {ref: 'Genesis 10:7' }]->(Sabtah),
+(Cush)-[:FATHER_OF {ref: 'Genesis 10:7' }]->(Raamah),
+(Cush)-[:FATHER_OF {ref: 'Genesis 10:7' }]->(Sabteca),
+(Seba)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Havilah),
+(Seba)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Sabtah),
+(Seba)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Raamah),
+(Seba)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Sabteca),
+(Havilah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Seba),
+(Havilah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Sabtah),
+(Havilah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Raamah),
+(Havilah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Sabteca),
+(Sabtah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Seba),
+(Sabtah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Havilah),
+(Sabtah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Raamah),
+(Sabtah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Sabteca),
+(Raamah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Seba),
+(Raamah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Havilah),
+(Raamah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Sabtah),
+(Raamah)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Sabteca),
+(Sabteca)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Seba),
+(Sabteca)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Havilah),
+(Sabteca)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Raamah),
+(Sabteca)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Sabtah),
+(Raamah)-[:FATHER_OF {ref: 'Genesis 10:7' }]->(Sheba),
+(Raamah)-[:FATHER_OF {ref: 'Genesis 10:7' }]->(Dedan),
+(Sheba)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Dedan),
+(Dedan)-[:BROTHER_OF {ref: 'Genesis 10:7' }]->(Sheba),
+(Cush)-[:FATHER_OF {ref: 'Genesis 10:8' }]->(Nimrod),
+(Mizraim)-[:FATHER_OF {ref: 'Genesis 10:13' }]->(Ludim),
+(Mizraim)-[:FATHER_OF {ref: 'Genesis 10:13' }]->(Anamim),
+(Mizraim)-[:FATHER_OF {ref: 'Genesis 10:13' }]->(Lehabim),
+(Mizraim)-[:FATHER_OF {ref: 'Genesis 10:13' }]->(Naphtuhim),
+(Mizraim)-[:FATHER_OF {ref: 'Genesis 10:14' }]->(Pathrusim),
+(Mizraim)-[:FATHER_OF {ref: 'Genesis 10:14' }]->(Casluhim),
+(Mizraim)-[:FATHER_OF {ref: 'Genesis 10:14' }]->(Caphtorim),
+(Ludim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Anamim),
+(Ludim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Lehabim),
+(Ludim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Naphtuhim),
+(Ludim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Pathrusim),
+(Ludim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Casluhim),
+(Ludim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Caphtorim),
+(Anamim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Ludim),
+(Anamim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Lehabim),
+(Anamim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Naphtuhim),
+(Anamim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Pathrusim),
+(Anamim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Casluhim),
+(Anamim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Caphtorim),
+(Lehabim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Anamim),
+(Lehabim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Ludim),
+(Lehabim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Naphtuhim),
+(Lehabim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Pathrusim),
+(Lehabim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Casluhim),
+(Lehabim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Caphtorim),
+(Naphtuhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Ludim),
+(Naphtuhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Anamim),
+(Naphtuhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Lehabim),
+(Naphtuhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Pathrusim),
+(Naphtuhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Casluhim),
+(Naphtuhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Caphtorim),
+(Pathrusim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Ludim),
+(Pathrusim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Anamim),
+(Pathrusim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Lehabim),
+(Pathrusim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Naphtuhim),
+(Pathrusim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Casluhim),
+(Pathrusim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Caphtorim),
+(Casluhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Ludim),
+(Casluhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Anamim),
+(Casluhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Lehabim),
+(Casluhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Pathrusim),
+(Casluhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Caphtorim),
+(Casluhim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Naphtuhim),
+(Caphtorim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Ludim),
+(Caphtorim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Anamim),
+(Caphtorim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Lehabim),
+(Caphtorim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Naphtuhim),
+(Caphtorim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Casluhim),
+(Caphtorim)-[:BROTHER_OF {ref: 'Genesis 10:13-14' }]->(Pathrusim),
+(Canaan)-[:FATHER_OF {ref: 'Genesis 10:15' }]->(Sidon),
+(Canaan)-[:FATHER_OF {ref: 'Genesis 10:15' }]->(Heth),
+(Sidon)-[:BROTHER_OF {ref: 'Genesis 10:15' }]->(Heth),
+(Heth)-[:BROTHER_OF {ref: 'Genesis 10:15' }]->(Sidon),
