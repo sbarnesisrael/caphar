@@ -1,19 +1,19 @@
-CREATE (TheMatrix:Movie {title:'The Matrix', released:1999, tagline:'Welcome to the Real World'})
-CREATE (Keanu:Person {name:'Keanu Reeves', born:1964})
-CREATE (Carrie:Person {name:'Carrie-Anne Moss', born:1967})
-CREATE (Laurence:Person {name:'Laurence Fishburne', born:1961})
-CREATE (Hugo:Person {name:'Hugo Weaving', born:1960})
-CREATE (LillyW:Person {name:'Lilly Wachowski', born:1967})
-CREATE (LanaW:Person {name:'Lana Wachowski', born:1965})
-CREATE (JoelS:Person {name:'Joel Silver', born:1952})
-CREATE
-(Keanu)-[:ACTED_IN {roles:['Neo']}]->(TheMatrix),
-(Carrie)-[:ACTED_IN {roles:['Trinity']}]->(TheMatrix),
-(Laurence)-[:ACTED_IN {roles:['Morpheus']}]->(TheMatrix),
-(Hugo)-[:ACTED_IN {roles:['Agent Smith']}]->(TheMatrix),
-(LillyW)-[:DIRECTED]->(TheMatrix),
-(LanaW)-[:DIRECTED]->(TheMatrix),
-(JoelS)-[:PRODUCED]->(TheMatrix)
+// CREATE (TheMatrix:Movie {title:'The Matrix', released:1999, tagline:'Welcome to the Real World'})
+// CREATE (Keanu:Person {name:'Keanu Reeves', born:1964})
+// CREATE (Carrie:Person {name:'Carrie-Anne Moss', born:1967})
+// CREATE (Laurence:Person {name:'Laurence Fishburne', born:1961})
+// CREATE (Hugo:Person {name:'Hugo Weaving', born:1960})
+// CREATE (LillyW:Person {name:'Lilly Wachowski', born:1967})
+// CREATE (LanaW:Person {name:'Lana Wachowski', born:1965})
+// CREATE (JoelS:Person {name:'Joel Silver', born:1952})
+// CREATE
+// (Keanu)-[:ACTED_IN {roles:['Neo']}]->(TheMatrix),
+// (Carrie)-[:ACTED_IN {roles:['Trinity']}]->(TheMatrix),
+// (Laurence)-[:ACTED_IN {roles:['Morpheus']}]->(TheMatrix),
+// (Hugo)-[:ACTED_IN {roles:['Agent Smith']}]->(TheMatrix),
+// (LillyW)-[:DIRECTED]->(TheMatrix),
+// (LanaW)-[:DIRECTED]->(TheMatrix),
+// (JoelS)-[:PRODUCED]->(TheMatrix)
 
 // ####
 // PEOPLE SECTION
@@ -64,6 +64,13 @@ CREATE (Tiras:Person { name: 'Tiras', firstMentioned: 'Genesis 10:2', death: 'Ge
 CREATE (Ashkenaz:Person { name: 'Ashkenaz', firstMentioned: 'Genesis 10:3', death: 'Genesis ', gender: 'male' })
 CREATE (Riphath:Person { name: 'Riphath', firstMentioned: 'Genesis 10:3', death: 'Genesis ', gender: 'male' })
 CREATE (Togarmah:Person { name: 'Togarmah', firstMentioned: 'Genesis 10:3', death: 'Genesis ', gender: 'male' })
+CREATE (Elishah:Person { name: 'Elishah', firstMentioned: 'Genesis 10:4', death: 'Genesis ', gender: 'male' })
+CREATE (Tarshish:Person { name: 'Tarshish', firstMentioned: 'Genesis 10:4', death: 'Genesis ', gender: 'male' })
+CREATE (Kittim:Person { name: 'Kittim', firstMentioned: 'Genesis 10:4', death: 'Genesis ', gender: 'male' })
+CREATE (Dodanim:Person { name: 'Dodanim', firstMentioned: 'Genesis 10:4', death: 'Genesis ', gender: 'male' })
+CREATE (Cush:Person { name: 'Cush', firstMentioned: 'Genesis 10:6', death: 'Genesis ', gender: 'male' })
+CREATE (Mizraim:Person { name: 'Mizraim', firstMentioned: 'Genesis 10:6', death: 'Genesis ', gender: 'male' })
+CREATE (Put:Person { name: 'Put', firstMentioned: 'Genesis 10:6', death: 'Genesis ', gender: 'male' })
 
 CREATE
 (Adam)-[:HUSBAND_OF {ref: 'Genesis 2:25' }]->(Eve),
@@ -104,15 +111,97 @@ CREATE
 (Lamech2)-[:FATHER_OF {ref: 'Genesis 5:28-29' }]->(Noah),
 (Noah)-[:FATHER_OF {ref: 'Genesis 5:32' }]->(Shem),
 (Noah)-[:FATHER_OF {ref: 'Genesis 5:32' }]->(Ham),
-(Noah)-[:FATHER_OF {ref: 'Genesis 5:32' }]->(Japheth)
-(Ham)-[:FATHER_OF {ref: 'Genesis 9:18' }]->(Canaan)
-(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Gomer)
-(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Magog)
-(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Madai)
-(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Javan)
-(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Tubal)
-(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Meshech)
-(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Tiras)
-(Gomer)-[:FATHER_OF {ref: 'Genesis 10:3' }]->(Ashkenaz)
-(Gomer)-[:FATHER_OF {ref: 'Genesis 10:3' }]->(Riphath)
-(Gomer)-[:FATHER_OF {ref: 'Genesis 10:3' }]->(Togarmah)
+(Noah)-[:FATHER_OF {ref: 'Genesis 5:32' }]->(Japheth),
+(Ham)-[:FATHER_OF {ref: 'Genesis 9:18' }]->(Canaan),
+(Ham)-[:BROTHER_OF {ref: 'Genesis 5:32' }]->(Shem),
+(Ham)-[:BROTHER_OF {ref: 'Genesis 5:32' }]->(Japheth),
+(Shem)-[:BROTHER_OF {ref: 'Genesis 5:32' }]->(Ham),
+(Shem)-[:BROTHER_OF {ref: 'Genesis 5:32' }]->(Japheth),
+(Japheth)-[:BROTHER_OF {ref: 'Genesis 5:32' }]->(Ham),
+(Japheth)-[:BROTHER_OF {ref: 'Genesis 5:32' }]->(Shem),
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Gomer),
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Magog),
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Madai),
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Javan),
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Tubal),
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Meshech),
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Tiras),
+(Gomer)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Magog),
+(Gomer)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Madai),
+(Gomer)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Javan),
+(Gomer)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tubal),
+(Gomer)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Meshech),
+(Gomer)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tiras),
+(Magog)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Gomer),
+(Magog)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Madai),
+(Magog)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Javan),
+(Magog)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tubal),
+(Magog)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Meshech),
+(Magog)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tiras),
+(Madai)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Gomer),
+(Madai)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Magog),
+(Madai)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Javan),
+(Madai)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Meshech),
+(Madai)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tiras),
+(Madai)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tubal),
+(Javan)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Gomer),
+(Javan)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Magog),
+(Javan)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tubal),
+(Javan)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Meshech),
+(Javan)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Madai),
+(Javan)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tiras),
+(Tubal)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Gomer),
+(Tubal)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Magog),
+(Tubal)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Madai),
+(Tubal)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Javan),
+(Tubal)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Meshech),
+(Tubal)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tiras),
+(Meshech)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Gomer),
+(Meshech)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Madai),
+(Meshech)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Javan),
+(Meshech)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tubal),
+(Meshech)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tiras),
+(Meshech)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Magog),
+(Tiras)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Gomer),
+(Tiras)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Magog),
+(Tiras)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Madai),
+(Tiras)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Javan),
+(Tiras)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Tubal),
+(Tiras)-[:BROTHER_OF {ref: 'Genesis 10:2' }]->(Meshech),
+(Gomer)-[:FATHER_OF {ref: 'Genesis 10:3' }]->(Ashkenaz),
+(Gomer)-[:FATHER_OF {ref: 'Genesis 10:3' }]->(Riphath),
+(Gomer)-[:FATHER_OF {ref: 'Genesis 10:3' }]->(Togarmah),
+(Ashkenaz)-[:BROTHER_OF {ref: 'Genesis 10:3' }]->(Riphath),
+(Ashkenaz)-[:BROTHER_OF {ref: 'Genesis 10:3' }]->(Togarmah),
+(Riphath)-[:BROTHER_OF {ref: 'Genesis 10:3' }]->(Ashkenaz),
+(Riphath)-[:BROTHER_OF {ref: 'Genesis 10:3' }]->(Togarmah),
+(Togarmah)-[:BROTHER_OF {ref: 'Genesis 10:3' }]->(Ashkenaz),
+(Togarmah)-[:BROTHER_OF {ref: 'Genesis 10:3' }]->(Riphath),
+(Javan)-[:FATHER_OF {ref: 'Genesis 10:4' }]->(Elishah),
+(Javan)-[:FATHER_OF {ref: 'Genesis 10:4' }]->(Tarshish),
+(Javan)-[:FATHER_OF {ref: 'Genesis 10:4' }]->(Kittim),
+(Javan)-[:FATHER_OF {ref: 'Genesis 10:4' }]->(Dodanim),
+(Elishah)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Tarshish),
+(Elishah)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Kittim),
+(Elishah)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Dodanim),
+(Tarshish)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Elishah),
+(Tarshish)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Kittim),
+(Tarshish)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Dodanim),
+(Kittim)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Elishah),
+(Kittim)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Tarshish),
+(Kittim)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Dodanim),
+(Dodanim)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Elishah),
+(Dodanim)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Tarshish),
+(Dodanim)-[:BROTHER_OF {ref: 'Genesis 10:4' }]->(Kittim),
+(Cush)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Mizraim),
+(Cush)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Put),
+(Cush)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Canaan),
+(Mizraim)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Cush),
+(Mizraim)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Put),
+(Mizraim)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Canaan),
+(Put)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Cush),
+(Put)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Mizraim),
+(Put)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Canaan),
+(Canaan)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Cush),
+(Canaan)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Mizraim),
+(Canaan)-[:BROTHER_OF {ref: 'Genesis 10:6' }]->(Put),
