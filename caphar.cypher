@@ -74,7 +74,7 @@ CREATE (Put:Person { name: 'Put', firstMentioned: 'Genesis 10:6', death: 'Genesi
 
 CREATE
 (Adam)-[:HUSBAND_OF {ref: 'Genesis 2:25' }]->(Eve),
-(Eve)-[:WIFE_OF {ref: 'Genesis 2:25' }->(Adam),
+(Eve)-[:WIFE_OF {ref: 'Genesis 2:25' }]->(Adam),
 (Adam)-[:FATHER_OF {ref: 'Genesis 4:1' }]->(Cain),
 (Adam)-[:FATHER_OF {ref: 'Genesis 4:2' }]->(Abel),
 (Adam)-[:FATHER_OF {ref: 'Genesis 4:25' }]->(Seth),
