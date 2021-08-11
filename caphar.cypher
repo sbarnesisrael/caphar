@@ -53,6 +53,17 @@ CREATE (Noah:Person { name: 'Noah', firstMentioned: 'Genesis 5:28-29', death: 'G
 CREATE (Shem:Person { name: 'Shem', firstMentioned: 'Genesis 5:32', death: 'Genesis 11:11', gender: 'male' })
 CREATE (Japheth:Person { name: 'Japheth', firstMentioned: 'Genesis 5:32', gender: 'male' })
 CREATE (Ham:Person { name: 'Ham', firstMentioned: 'Genesis 5:32', gender: 'male' })
+CREATE (Canaan:Person { name: 'Canaan', firstMentioned: 'Genesis 9:18', death: 'Genesis ', gender: 'male' })
+CREATE (Gomer:Person { name: 'Gomer', firstMentioned: 'Genesis 10:2', death: 'Genesis ', gender: 'male' })
+CREATE (Magog:Person { name: 'Magog', firstMentioned: 'Genesis 10:2', death: 'Genesis ', gender: 'male' })
+CREATE (Madai:Person { name: 'Madai', firstMentioned: 'Genesis 10:2', death: 'Genesis ', gender: 'male' })
+CREATE (Javan:Person { name: 'Javan', firstMentioned: 'Genesis 10:2', death: 'Genesis ', gender: 'male' })
+CREATE (Tubal:Person { name: 'Tubal', firstMentioned: 'Genesis 10:2', death: 'Genesis ', gender: 'male' })
+CREATE (Meshech:Person { name: 'Meshech', firstMentioned: 'Genesis 10:2', death: 'Genesis ', gender: 'male' })
+CREATE (Tiras:Person { name: 'Tiras', firstMentioned: 'Genesis 10:2', death: 'Genesis ', gender: 'male' })
+CREATE (Ashkenaz:Person { name: 'Ashkenaz', firstMentioned: 'Genesis 10:3', death: 'Genesis ', gender: 'male' })
+CREATE (Riphath:Person { name: 'Riphath', firstMentioned: 'Genesis 10:3', death: 'Genesis ', gender: 'male' })
+CREATE (Togarmah:Person { name: 'Togarmah', firstMentioned: 'Genesis 10:3', death: 'Genesis ', gender: 'male' })
 
 CREATE
 (Adam)-[:HUSBAND_OF {ref: 'Genesis 2:25' }]->(Eve),
@@ -94,3 +105,14 @@ CREATE
 (Noah)-[:FATHER_OF {ref: 'Genesis 5:32' }]->(Shem),
 (Noah)-[:FATHER_OF {ref: 'Genesis 5:32' }]->(Ham),
 (Noah)-[:FATHER_OF {ref: 'Genesis 5:32' }]->(Japheth)
+(Ham)-[:FATHER_OF {ref: 'Genesis 9:18' }]->(Canaan)
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Gomer)
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Magog)
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Madai)
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Javan)
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Tubal)
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Meshech)
+(Japheth)-[:FATHER_OF {ref: 'Genesis 10:2' }]->(Tiras)
+(Gomer)-[:FATHER_OF {ref: 'Genesis 10:3' }]->(Ashkenaz)
+(Gomer)-[:FATHER_OF {ref: 'Genesis 10:3' }]->(Riphath)
+(Gomer)-[:FATHER_OF {ref: 'Genesis 10:3' }]->(Togarmah)
