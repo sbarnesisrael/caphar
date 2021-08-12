@@ -57,6 +57,7 @@ The relationships from peoples to place follow the pattern "ARE_FROM". For examp
 
 
 
+## Misc Notes
 | Years to a Generation  | Years in Each Segment  | Total Years (Abraham to Jesus)  |   | Notes  |
 |---|---|---|---|---|
 | 20  | 280  | 840  |   |   |
