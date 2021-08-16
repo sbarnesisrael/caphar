@@ -453,10 +453,50 @@ CREATE
 (Milcah)-[:WIFE_OF {ref: 'Genesis 11:29' }]->(Nahor2),
 (Milcah)-[:DAUGHTER_OF {ref: 'Genesis 11:29' }]->(Haran),
 (Haran)-[:FATHER_OF {ref: 'Genesis 11:29' }]->(Iscah),
+(Mamre)-[:BROTHER_OF {ref: 'Genesis 14:13' }]->(Eshcol),
+(Mamre)-[:BROTHER_OF {ref: 'Genesis 14:13' }]->(Aner),
+(Eshcol)-[:BROTHER_OF {ref: 'Genesis 14:13' }]->(Aner),
+(Eshcol)-[:BROTHER_OF {ref: 'Genesis 14:13' }]->(Mamre),
 
+
+//
+// PERSONS to PLACES
+//
+CREATE
+(Amraphel)-[:KING_OF {ref: 'Genesis 14:1' }]->(Shinar),
+(Amraphel)-[:FROM {ref: 'Genesis 14:1' }]->(Shinar),
+(Arioch)-[:KING_OF {ref: 'Genesis 14:1' }]->(Ellasar),
+(Arioch)-[:FROM {ref: 'Genesis 14:1' }]->(Ellasar),
+(Chedorlaomer)-[:KING_OF {ref: 'Genesis 14:1' }]->(Elam),
+(Chedorlaomer)-[:FROM {ref: 'Genesis 14:1' }]->(Elam),
+(Tidal)-[:KING_OF {ref: 'Genesis 14:1' }]->(Goiim),
+(Tidal)-[:FROM {ref: 'Genesis 14:1' }]->(Goiim),
+(Bera)-[:KING_OF {ref: 'Genesis 14:2' }]->(Sodom),
+(Bera)-[:FROM {ref: 'Genesis 14:2' }]->(Sodom),
+(Birsha)-[:KING_OF {ref: 'Genesis 14:2' }]->(Gomorrah),
+(Birsha)-[:FROM {ref: 'Genesis 14:2' }]->(Gomorrah),
+(Shinab)-[:KING_OF {ref: 'Genesis 14:2' }]->(Admah),
+(Shinab)-[:FROM {ref: 'Genesis 14:2' }]->(Admah),
+(Shemeber)-[:KING_OF {ref: 'Genesis 14:2' }]->(Zeboiim),
+(Rephaim)-[:FROM {ref: 'Genesis 14:5' }]->(Ashterosh-karnaim),
+(Zuzim)-[:FROM {ref: 'Genesis 14:5' }]->(Ham2),
+(Emim)-[:FROM {ref: 'Genesis 14:5' }]->(Shaveh-kiriathaim),
+(Melchizedek)-[:KING_OF {ref: 'Genesis 14:18' }]->(Salem),
+(Melchizedek)-[:FROM {ref: 'Genesis 14:18' }]->(Salem),
+
+
+//
+// PERSON to PEOPLES
+// 
+CREATE
+(Mamre)-[:THE {ref: 'Genesis 14:13' }]->(Amorite),
 
 //
 // PEOPLES to PLACES
 //
 CREATE
 (Canaanites)-[:ARE_FROM]->(Canaan),
+(Rephaim)-[:ARE_FROM]->(Ashterosh-karnaim),
+(Zuzim)-[:ARE_FROM]->(Ham2),
+(Emim)-[:ARE_FROM]->(Shaveh-kiriathaim),
+(Amorites)-[:ARE_FROM]->(Hazazon-tamar),
