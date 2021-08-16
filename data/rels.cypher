@@ -453,3 +453,10 @@ CREATE
 (Milcah)-[:WIFE_OF {ref: 'Genesis 11:29' }]->(Nahor2),
 (Milcah)-[:DAUGHTER_OF {ref: 'Genesis 11:29' }]->(Haran),
 (Haran)-[:FATHER_OF {ref: 'Genesis 11:29' }]->(Iscah),
+
+
+//
+// PEOPLES to PLACES
+//
+CREATE
+(Canaanites)-[:ARE_FROM]->(Canaan),
