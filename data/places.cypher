@@ -12,3 +12,8 @@ CREATE (Bethel:Place { name: 'Bethel', firstMentioned: 'Genesis 12:8', type: 'Re
 CREATE (Ai:Place { name: 'Ai', firstMentioned: 'Genesis 12:8', type: 'Region' })
 CREATE (Negev:Place { name: 'Negev', firstMentioned: 'Genesis 12:9', type: 'Region' })
 CREATE (Egypt:Place { name: 'Egypt', firstMentioned: 'Genesis 12:10', type: 'Region' })
+CREATE (Valley_of_the_Jordan:Place { name: 'valley of the Jordan', firstMentioned: 'Genesis 13:10', type: 'geo_feature' })
+CREATE (Zoar:Place { name: 'Zoar', firstMentioned: 'Genesis 13:10', type: 'Region' })
+CREATE (Sodom:Place { name: 'Sodom', firstMentioned: 'Genesis 13:12', type: 'City' })
+CREATE (Oaks_of_Mamre:Place { name: 'Oaks of Mamre', firstMentioned: 'Genesis 13:18', type: 'geo_feat' })
+CREATE (Hebron:Place { name: 'Hebron', firstMentioned: 'Genesis 13:18', type: 'City' })
