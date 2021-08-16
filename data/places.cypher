@@ -38,3 +38,5 @@ CREATE (Hobah:Place { name: 'Hobah', firstMentioned: 'Genesis 14:15', type: 'Reg
 CREATE (Damascus:Place { name: 'Damascus', firstMentioned: 'Genesis 14:15', type: 'City' })
 CREATE (valley_of_Shaveh:Place { name: 'valley of Shaveh', firstMentioned: 'Genesis 14:17', type: 'geo_feat' })
 CREATE (Salem:Place { name: 'Salem', firstMentioned: 'Genesis 14:18', type: 'Region' })
+CREATE (river_of_Egypt:Place { name: 'river of Egypt', firstMentioned: 'Genesis 15:18', type: 'geo_feat' })
+CREATE (Euphrates:Place { name: 'Euphrates', firstMentioned: 'Genesis 15:18', type: 'geo_feat' })

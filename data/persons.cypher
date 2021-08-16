@@ -111,3 +111,4 @@ CREATE (Mamre:Person { name: 'Mamre', firstMentioned: 'Genesis 14:13', death: ''
 CREATE (Eshcol:Person { name: 'Eshcol', firstMentioned: 'Genesis 14:13', death: '', gender: 'male' })
 CREATE (Aner:Person { name: 'Aner', firstMentioned: 'Genesis 14:13', death: '', gender: 'male' })
 CREATE (Melchizedek:Person { name: 'Melchizedek', firstMentioned: 'Genesis 14:18', death: '', gender: 'male' })
+CREATE (Eliezer:Person { name: 'Eliezer', firstMentioned: 'Genesis 15:2', death: '', gender: 'male' })
