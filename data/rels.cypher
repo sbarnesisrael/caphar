@@ -457,6 +457,16 @@ CREATE
 (Mamre)-[:BROTHER_OF {ref: 'Genesis 14:13' }]->(Aner),
 (Eshcol)-[:BROTHER_OF {ref: 'Genesis 14:13' }]->(Aner),
 (Eshcol)-[:BROTHER_OF {ref: 'Genesis 14:13' }]->(Mamre),
+(Hagar)-[:HANDMAIDEN_OF {ref: 'Genesis 16:1' }]->(Sarai),
+(Hagar)-[:MOTHER_OF {ref: 'Genesis 16:11' }]->(Ishmael),
+(Ishmael)-[:SON_OF {ref: 'Genesis 16:11' }]->(Hagar),
+(Ishmael)-[:SON_OF {ref: 'Genesis 16:11' }]->(Abram),
+(Abram)-[:OTHER_NAME_OF {ref: 'Genesis 17:5' }]->(Abraham),
+(Sarai)-[:OTHER_NAME_OF {ref: 'Genesis 17:15' }]->(Sarah),
+(Abraham)-[:HUSBAND_OF {ref: 'Genesis 17:15' }]->(Sarah),
+(Sarah)-[:WIFE_OF {ref: 'Genesis 17:15' }]->(Abraham),
+(Isaac)-[:SON_OF {ref: 'Genesis 17:19' }]->(Abram),
+(Isaac)-[:SON_OF {ref: 'Genesis 17:19' }]->(Sarah),
 
 
 //
@@ -483,6 +493,7 @@ CREATE
 (Emim)-[:FROM {ref: 'Genesis 14:5' }]->(Shaveh-kiriathaim),
 (Melchizedek)-[:KING_OF {ref: 'Genesis 14:18' }]->(Salem),
 (Melchizedek)-[:FROM {ref: 'Genesis 14:18' }]->(Salem),
+(Hagar)-[:FROM { ref: 'Genesis 16:1' }]->(Egypt),
 
 
 //
@@ -500,3 +511,4 @@ CREATE
 (Zuzim)-[:ARE_FROM]->(Ham2),
 (Emim)-[:ARE_FROM]->(Shaveh-kiriathaim),
 (Amorites)-[:ARE_FROM]->(Hazazon-tamar),
+(Egyptians)-[:ARE_FROM]->(Egypt),
