@@ -467,6 +467,12 @@ CREATE
 (Sarah)-[:WIFE_OF {ref: 'Genesis 17:15' }]->(Abraham),
 (Isaac)-[:SON_OF {ref: 'Genesis 17:19' }]->(Abram),
 (Isaac)-[:SON_OF {ref: 'Genesis 17:19' }]->(Sarah),
+(Lot)-[:FATHER_OF {ref: 'Genesis 19:37' }]->(Moab),
+(Lot)-[:FATHER_OF {ref: 'Genesis 19:38' }]->(Ben-ammi),
+(Moab)-[:SON_OF {ref: 'Genesis 19:37' }]->(Lot),
+(Ben-ammi)-[:SON_OF {ref: 'Genesis 19:38' }]->(Lot),
+(Abraham)-[:BROTHER_OF {ref: 'Genesis 20:12' }]->(Sarah),
+(Sarah)-[:SISTER_OF {ref: 'Genesis 20:12' }]->(Abraham),
 
 
 //
@@ -494,6 +500,7 @@ CREATE
 (Melchizedek)-[:KING_OF {ref: 'Genesis 14:18' }]->(Salem),
 (Melchizedek)-[:FROM {ref: 'Genesis 14:18' }]->(Salem),
 (Hagar)-[:FROM { ref: 'Genesis 16:1' }]->(Egypt),
+(Abimelech)-[:KING_OF {ref: 'Genesis 20:2' }]->(Gerar),
 
 
 //

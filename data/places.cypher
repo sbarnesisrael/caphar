@@ -43,3 +43,5 @@ CREATE (Euphrates:Place { name: 'Euphrates', firstMentioned: 'Genesis 15:18', ty
 CREATE (Shur:Place { name: 'Shur', firstMentioned: 'Genesis 16:7', type: 'Region' })
 CREATE (Beer-lahai-roi:Place { name: 'Beer-lahai-roi', firstMentioned: 'Genesis 16:14', type: 'geo_feat' })
 CREATE (Bered:Place { name: 'Bered', firstMentioned: 'Genesis 16:14', type: 'Region' })
+CREATE (ZoarCity:Place { name: 'Zoar City', firstMentioned: 'Genesis 19:22', type: 'City' })
+CREATE (Gerar:Place { name: 'Gerar', firstMentioned: 'Genesis 20:1', type: 'Region' })
