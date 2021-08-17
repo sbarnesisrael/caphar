@@ -117,3 +117,6 @@ CREATE (Ishmael:Person { name: 'Ishmael', firstMentioned: 'Genesis 16:11', death
 CREATE (Abraham:Person { name: 'Abraham', firstMentioned: 'Genesis 17:5', death: '', gender: 'male' })
 CREATE (Sarah:Person { name: 'Sarah', firstMentioned: 'Genesis 17:15', death: '', gender: 'female' })
 CREATE (Isaac:Person { name: 'Isaac', firstMentioned: 'Genesis 17:19', death: '', gender: 'male' })
+CREATE (Moab:Person { name: 'Moab', firstMentioned: 'Genesis 19:37', death: '', gender: 'male' })
+CREATE (Ben-ammi:Person { name: 'Ben-ammi', firstMentioned: 'Genesis 19:38', death: '', gender: 'male' })
+CREATE (Abimelech:Person { name: 'Abimelech', firstMentioned: 'Genesis 20:2', death: '', gender: 'male' })
