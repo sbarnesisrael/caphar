@@ -40,3 +40,6 @@ CREATE (valley_of_Shaveh:Place { name: 'valley of Shaveh', firstMentioned: 'Gene
 CREATE (Salem:Place { name: 'Salem', firstMentioned: 'Genesis 14:18', type: 'Region' })
 CREATE (river_of_Egypt:Place { name: 'river of Egypt', firstMentioned: 'Genesis 15:18', type: 'geo_feat' })
 CREATE (Euphrates:Place { name: 'Euphrates', firstMentioned: 'Genesis 15:18', type: 'geo_feat' })
+CREATE (Shur:Place { name: 'Shur', firstMentioned: 'Genesis 16:7', type: 'Region' })
+CREATE (Beer-lahai-roi:Place { name: 'Beer-lahai-roi', firstMentioned: 'Genesis 16:14', type: 'geo_feat' })
+CREATE (Bered:Place { name: 'Bered', firstMentioned: 'Genesis 16:14', type: 'Region' })
